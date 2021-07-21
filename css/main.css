@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --bg-color: #17150f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  padding-inline: calc((100% - 1100px) / 2);
+}
+
+.logo {
+  color: #fff;
+  text-align: center;
+  font: 600 2.5rem times;
+}
+
+.introduction {
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  padding-inline: calc((100% - 700px) / 2);
+}
+.introduction .hero-img {
+  position: relative;
+}
+.introduction .hero-img img {
+  max-width: 100%;
+  margin: 2rem auto 0;
+}
+.introduction .hero-img figcaption {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 3rem;
+}
+.introduction .hero-img figcaption .number {
+  font: bold 5rem sans-serif;
+  margin-top: 1.5rem;
+}
+@media (max-width: 720px) {
+  .introduction .hero-img figcaption {
+    font-size: calc(4vw + 10px);
+  }
+  .introduction .hero-img figcaption .number {
+    font-size: calc(8vw + 5px);
+    margin-top: 7vw;
+  }
+}
+.introduction h1 {
+  font: 300 3.5rem sans-serif;
+  text-align: center;
+}
+.introduction .social-networks {
+  display: flex;
+  justify-content: center;
+}
+.introduction .social-networks * {
+  margin-inline: 0.3rem;
+}
+.introduction .social-networks .reporter {
+  margin-left: 1.5rem;
+  font: bold 1.5rem sans-serif;
+}
+.introduction .photographers {
+  text-align: center;
+  font: 700 1em/2rem sans-serif;
+}
+.introduction .preface {
+  font: 1em/1.6rem sans-serif;
+  letter-spacing: 0.3px;
+}
+.introduction .abridged {
+  height: 15rem;
+  overflow: hidden;
+  position: relative;
+}
+.introduction .abridged::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#0000 70%, var(--bg-color));
+}
+.introduction .read-more {
+  margin: 0 auto 2rem;
+  display: block;
+  background: #0000;
+  color: #fff;
+  font: bold 1.1rem sans-serif;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.women-grid {
+  display: grid;
+  margin: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+  color: #fff;
+}
+.women-grid figure {
+  margin: 0;
+  border: 4px solid red;
+}
+.women-grid figure.contracted {
+  height: 50%;
+  filter: grayscale(1);
+}
+.women-grid img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

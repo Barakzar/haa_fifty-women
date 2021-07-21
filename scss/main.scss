@@ -1,0 +1,128 @@
+// @font-face {
+//     font-family: "Open Sans Hebrew";
+//     src: url();
+// }
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root {
+  --bg-color: #17150f;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  // border: 1px solid red;
+  padding-inline: calc((100% - 1100px) / 2);
+}
+// Logo
+.logo {
+  color: #fff;
+  text-align: center;
+  font: 600 2.5rem times;
+}
+// Introduction
+.introduction {
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  padding-inline: calc((100% - 700px) / 2);
+  .hero-img {
+    position: relative;
+    img {
+      max-width: 100%;
+      margin: 2rem auto 0;
+    }
+    figcaption {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 3rem;
+      .number {
+        font: bold 5rem sans-serif;
+        margin-top: 1.5rem;
+      }
+      @media (max-width: 720px) {
+        // border: 1px solid red;
+        font-size: calc(4vw + 10px);
+        .number {
+          font-size: calc(8vw + 5px);
+          margin-top: 7vw;
+        }
+      }
+    }
+  }
+  h1 {
+    font: 300 3.5rem sans-serif;
+    text-align: center;
+  }
+  .social-networks {
+    display: flex;
+    justify-content: center;
+    * {
+      margin-inline: 0.3rem;
+    }
+    .reporter {
+      margin-left: 1.5rem;
+      font: bold 1.5rem sans-serif;
+    }
+  }
+  .photographers {
+    text-align: center;
+    font: 700 1em/2rem sans-serif;
+  }
+  .preface {
+    font: 1em/1.6rem sans-serif;
+    letter-spacing: 0.3px;
+  }
+  .abridged {
+    // border: 1px solid red;
+    height: 15rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .abridged::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#0000 70%, var(--bg-color));
+  }
+  .read-more {
+    margin: 0 auto 2rem;
+    display: block;
+    background: #0000;
+    color: #fff;
+    font: bold 1.1rem sans-serif;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+// Women grid
+.women-grid {
+  display: grid;
+  margin: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+  color: #fff;
+  figure {
+    margin: 0;
+    border: 4px solid red;
+    &.contracted {
+      height: 50%;
+      //   overflow: hidden;
+      filter: grayscale(1);
+    }
+  }
+  img {
+    width: 100%;
+    // display: block;
+  }
+  blockquote {
+    // margin: 0;
+  }
+}
